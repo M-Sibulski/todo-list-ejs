@@ -1,0 +1,28 @@
+<%- include("header") -%>
+    <div class="card">
+        <h1><%= listTitle %>'s ToDo List</h1>
+
+
+        <ul class="todo_items">
+            <% if (items) {
+                items.forEach((item) => {%>
+                    <form action="/" method="post">
+                        <li class="item">
+                            <input type="checkbox" name="checkbox">
+                            <h2 name="item"><%= item %></h2> 
+                            <button type="delete" name="check"><i class="fas fa-trash-alt"></i></button>
+                        </li>
+                    </form>
+                    
+            <% })} %> 
+        </ul>
+
+        <form class="Add" action="/" method="post">
+            <input type="text" name="newToDo" placeholder="Type an activity To Do" autocomplete="off">
+            <button type="submit" name="submit" value= <%= listTitle %> >Add</button>
+        </form>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/index.js"></script>
+    
+<%- include("footer") -%>

@@ -1,0 +1,115 @@
+:root {
+    --Primary-Color: #325288;
+    --Secondary-Color: #D96098;
+    --Neutral: #FAEEE7;
+    --Background: #24A19C;
+}
+
+body {
+    background-color: var(--Background);
+    /* align-items: center;
+    justify-content: center;
+    display: flex; */
+}
+
+.card {
+    background-color: var(--Neutral);
+    padding: 2rem;
+    border-radius: 1rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* margin: auto;
+    width: 50%; */
+    box-shadow: 0.3rem 0.3rem 1rem -0.3rem rgba(0, 0, 0, 0.7);
+    max-width: 70vh;
+}
+
+h1 {
+    font-family: 'Yellowtail', cursive;
+    color: var(--Primary-Color);
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+input:checked+h2 {
+    text-decoration-line: line-through;
+    text-decoration-color: gray;
+}
+
+input:checked~button {
+    visibility: visible;
+}
+
+ul {
+    /* background-color: #A267AC;
+    border-radius: 0.5rem; */
+    padding-top: 1rem;
+    
+    padding-bottom: 1rem;
+    padding-left: 0;
+}
+
+li {
+    color: var(--Primary-Color);
+    min-height: 35px;
+    display: flex;
+    align-items: center; 
+    padding: 0.5rem;
+    border: solid;
+    border-color: var(--Neutral);
+    border-width: 2px;
+    border-radius: 0.5rem;
+}
+
+h2 {
+    margin-right: 2rem;
+    font-family: 'Montserrat', sans-serif;
+    font-size: medium;
+}
+
+li:hover {
+    border-color: var(--Secondary-Color);
+}
+
+li>input {
+    margin-right: 1rem;
+}
+
+li>button {
+    visibility: hidden;
+    margin-left: auto;
+    background-color: var(--Neutral);
+    border: hidden;
+}
+
+ .Add {
+    display: flex;
+}
+
+.Add>input {
+    font-family: 'Montserrat', sans-serif;
+    font-size: medium;
+    width: 100%;
+    border-color: var(--Primary-Color);
+    border-width: 1px;
+    border-radius: 6px;
+    background-color: white;
+}
+
+.Add>button {
+    font-family: 'Montserrat', sans-serif;
+    font-size: medium;
+    background-color: var(--Secondary-Color);
+    border: solid;
+    border-radius: 0.5rem;
+    border-color: var(--Secondary-Color);
+    margin-left: 1rem;
+}
+
+footer {
+    position: absolute;
+    bottom: 10px;
+}
